@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: "Quantico", sans-serif !important;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.card{
+    width: 100%;
+    min-width: 500px;
+    overflow: auto;
+}
+.card-header{
+    background-color: aqua !important;
+}
+.card-body{
+    height:400px;
+    overflow: auto;
+}
