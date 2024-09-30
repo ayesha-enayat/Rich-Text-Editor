@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body{
     height: 100vh;
     width: 100vw;
-    font-family: "Quantico", sans-serif !important;
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
+    background-color: #d9dbdc !important;
     margin: 0;
     padding: 0;
 }
 .card{
-    width: 100%;
-    min-width: 500px;
-    overflow: auto;
+    /* box-shadow: 0px 0px 17px -1px #000000; */
 }
-.card-header{
-    background-color: aqua !important;
+.text-editor-header{
+    background-color: rgb(198, 197, 198) !important;
 }
-.card-body{
+.content{
     height:400px;
+    outline: none !important;
     overflow: auto;
+}
+.btn{
+   
 }
