@@ -1,25 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body{
-    height: 100vh;
-    width: 100vw;
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: url(https://img.freepik.com/free-vector/pastel-letter-wallpaper-pattern-vector_53876-173023.jpg?size=626&ext=jpg&ga=GA1.1.569881281.1722606447&semt=ais_hybrid) no-repeat center center / cover;
     overflow: hidden;
-    background-color: #d9dbdc !important;
-    margin: 0;
-    padding: 0;
+    width:100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.text-editor-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #AAD7D9 !important;
+}
+
+.text-editor-header .btn {
+    border: none;
+    background: none;
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+.text-editor-header .btn:hover {
+    color: #024aff;
 }
 .card{
-    /* box-shadow: 0px 0px 17px -1px #000000; */
+    border: 1px solid #024aff !important;
 }
-.text-editor-header{
-    background-color: rgb(198, 197, 198) !important;
+.content {
+    min-height: 300px;
+    padding: 15px;
+    border: 1px solid #dee2e6 !important;
+    border-top: none;
+    background-color: #ffffff !important;
+    overflow-y: auto;
+    font-family:"Noto Serif", serif;
 }
-.content{
-    height:400px;
-    outline: none !important;
-    overflow: auto;
+
+.content:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(13, 110, 253, 0.5);
 }
-.btn{
-   
+.content[contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
 }
