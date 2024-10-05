@@ -1,35 +1,62 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background: url(https://img.freepik.com/free-vector/pastel-letter-wallpaper-pattern-vector_53876-173023.jpg?size=626&ext=jpg&ga=GA1.1.569881281.1722606447&semt=ais_hybrid) no-repeat center center / cover;
+    background: url(https://img.freepik.com/free-vector/watercolor-english-letter-wallpaper-with-playful-design_53876-100408.jpg?ga=GA1.1.569881281.1722606447&semt=ais_hybrid) no-repeat center center / cover;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     height: 100vh;
 }
-.container{
-    width: 100%;
-    height: 100%;
+.heading{
+    font-family: 'Noto Serif', serif;
+}
+/* Style for color picker inputs to look like buttons */
+.color-picker {
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
-.text-editor-header {
-    border-bottom: 1px solid #dee2e6;
-    background-color: #AAD7D9 !important;
+/* Style for the placeholder */
+.content[contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    pointer-events: none;
 }
 
+/* Optional: Adjust the toolbar button sizes */
 .text-editor-header .btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust the color picker to align with buttons */
+.text-editor-header .color-picker {
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Remove default input styles */
+.text-editor-header input[type="color"] {
+    padding: 0;
     border: none;
     background: none;
-    color: #495057;
-    font-size: 1.1rem;
 }
 
+/*Color changes on hover on  the button*/
 .text-editor-header .btn:hover {
     color: #024aff;
 }
-.card{
-    border: 1px solid #024aff !important;
-}
+
+/*Adjust the content div styles*/
 .content {
     min-height: 300px;
     padding: 15px;
@@ -37,19 +64,15 @@ body {
     border-top: none;
     background-color: #ffffff !important;
     overflow-y: auto;
-    font-family:"Noto Serif", serif;
 }
 
+/*Focus on content div when click*/
 .content:focus {
     outline: none;
     box-shadow: inset 0 0 5px rgba(13, 110, 253, 0.5);
 }
-.content[contenteditable="true"]:empty:before {
-    content: attr(placeholder);
-    color: gray;
-    pointer-events: none;
-}
 
+/*Media queries*/
 @media (max-width: 768px) {
     .card {
         width: 100%;
